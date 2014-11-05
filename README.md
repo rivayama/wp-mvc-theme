@@ -99,7 +99,7 @@ Fundamental models for WordPress objects like `post` are defined in `path/to/plu
 
 ### Unit test
 
-`generate theme` also generates phpunit.xml on the theme directory, and `generate element` generates an unit test file. Now you can run unit test with `phpunit` command on `path/to/themes/city/`.
+`mvct generate theme` generates phpunit.xml on the theme directory, and `mvct generate element` generates an unit test file for the element. You can now run unit test with `phpunit` on `path/to/themes/city/`.
 
 ```shell
 $ cd path/to/themes/city
