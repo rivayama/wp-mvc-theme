@@ -29,7 +29,7 @@ This will generate controller, model and view for news in `path/to/themes/city/e
 
 Modify `path/to/themes/city/index.php`.
 
-```html+php:path/to/theme/city/index.php
+```php
 <?php get_header(); ?>
 
 <div id="container">
@@ -45,7 +45,7 @@ Modify `path/to/themes/city/index.php`.
 
 You can now see the rendered view replaced to `get_element('news')` from `path/to/themes/city/elements/views/news.php`.
 
-```html+php:path/to/theme/city/elements/views/news.php
+```php
 <div id="news">
     <p>News</p>
 </div>
