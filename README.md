@@ -97,9 +97,25 @@ class NewsController extends MvctController {
 
 Fundamental models for WordPress objects such as `post` are defined in `path/to/plugins/wp-mvc-theme/core/models/`.
 
-### Test
+### Unit test
 
-...
+`generate theme` also generates phpunit.xml on the theme directory, and `generate element` generates an unit test file. Now you can run unit test with `phpunit` command on `path/to/themes/city/`.
+
+```shell
+$ cd path/to/themes/city
+$ phpunit
+PHPUnit 4.2.2 by Sebastian Bergmann.
+
+Configuration read from /var/www/wp/wp-content/themes/city/phpunit.xml
+
+.
+
+Time: 1 ms, Memory: 24.25Mb
+
+OK (1 test, 0 assertions)
+```
+
+Some useful methods like `getElement()` are available on `wp-mvc-theme/core/tests/mvct_test.php`. Add and modify tests for your theme. Enjoy testing!
 
 ## Links
 
