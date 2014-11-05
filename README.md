@@ -10,7 +10,7 @@ An MVC framework for WordPress theme
 
 ### Code generation
 
-Go int the WP MVC Theme directory and make sure that `mvct` is executable.
+Go into the WP MVC Theme directory and make sure that `mvct` is executable.
 
 	$ cd path/to/plugins/wp-mvc-theme
 	$ chmod +x mvct
@@ -71,10 +71,10 @@ The elements can be used by `get_element()` function from template files. Modify
 Here is a simple description for the controller.
 
 * Models which are used in the controller are set by `$uses`.
-* `$this->set()` can pass variables to the view.
-* `$this->render_view()` renders given view.
+* `$this->set()` can relay variables to the view.
+* `$this->render_view()` renders view of given name.
 
-The example of `path/to/themes/city/elements/controllers/news_controller.php` is shown below.
+An example of `path/to/themes/city/elements/controllers/news_controller.php` is shown below.
 
 ```php
 <?php
