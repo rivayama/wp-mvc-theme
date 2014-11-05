@@ -36,6 +36,7 @@ class MvctGenerateShell {
 		$this->templater->create('theme/header', $theme_path.'/header.php', $vars);
 		$this->templater->create('theme/sidebar', $theme_path.'/sidebar.php', $vars);
 		$this->templater->create('theme/footer', $theme_path.'/footer.php', $vars);
+		$this->templater->create('theme/phpunit', $theme_path.'/phpunit.xml', $vars);
 		$this->templater->create('template', $theme_path.'/index.php', $vars);
 		echo "Theme `$name` created.";
 	}
