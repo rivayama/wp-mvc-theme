@@ -42,7 +42,7 @@ See `help` for more detail.
 
 The elements can be used by `get_element()` function on template files. Modify `path/to/themes/city/index.php`.
 
-```html
+```php
 <?php get_header(); ?>
 
 <div id="container">
