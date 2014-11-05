@@ -40,7 +40,7 @@ See `help` for more detail.
 
 ## Usage
 
-The elements can be used by `get_element()`. Modify `path/to/themes/city/index.php`.
+The elements can be used by `get_element()` function on template files. Modify `path/to/themes/city/index.php`.
 
 ```php
 <?php get_header(); ?>
