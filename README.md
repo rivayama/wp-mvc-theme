@@ -93,7 +93,7 @@ Fundamental models for WordPress objects such as `post` are defined in `path/to/
 
 ## Links
 
-* [WP-MVC][1] A lot of ideas come from this.
+* [WP-MVC][1] : A lot of ideas come from here
 
 ## License
 
