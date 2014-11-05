@@ -42,7 +42,7 @@ See `help` for more detail.
 
 The elements can be used by `get_element()` function on template files. Modify `path/to/themes/city/index.php`.
 
-```php
+```html+php
 <?php get_header(); ?>
 
 <div id="container">
@@ -58,7 +58,7 @@ The elements can be used by `get_element()` function on template files. Modify `
 
 You can now see the rendered view replaced to `get_element('news')` from `path/to/themes/city/elements/views/news.php`.
 
-```php
+```html+php
 <div id="news">
     <p>News</p>
 </div>
