@@ -119,7 +119,7 @@ Some useful methods like `getElement()` are available on `wp-mvc-theme/core/test
 
 ## Links
 
-* [WP-MVC][1] : A lot of ideas come from here
+* [WP-MVC][1] : A lot of ideas come from here.
 
 ## License
 
