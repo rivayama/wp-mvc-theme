@@ -27,7 +27,20 @@ Generate an element's initial code.
 
 This will generate controller, model and view for news in `path/to/themes/city/elements/`, and test in `path/to/themes/city/tests/`. The element can now be used from the theme.
 
-Modify `path/to/themes/city/index.php`.
+You can also generate codes separately like following:
+
+    $ ./mvct generate controller feature
+    $ ./mvct generate model feature
+    $ ./mvct generate view feature
+    $ ./mvct generate test feature
+
+See `help` for more detail.
+
+    $ ./mvct help
+
+## Usage
+
+The elements can be used by `get_element()`. Modify `path/to/themes/city/index.php`.
 
 ```php
 <?php get_header(); ?>
@@ -35,7 +48,7 @@ Modify `path/to/themes/city/index.php`.
 <div id="container">
     <div id="main">
         <h2>City</h2>
-        <?php get_element('news'); // Modify here ?>
+        <?php get_element('news'); // <- Modify here ?>
     </div>
     <?php get_sidebar(); ?>
 </div>
@@ -50,6 +63,10 @@ You can now see the rendered view replaced to `get_element('news')` from `path/t
     <p>News</p>
 </div>
 ```
+
+The controller can pass variables to be used in the view.
+
+...
 
 ## License
 
