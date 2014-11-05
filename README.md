@@ -40,7 +40,9 @@ See `help` for more detail.
 
 ## Usage
 
-The elements can be used by `get_element()` function on template files. Modify `path/to/themes/city/index.php`.
+### Template and view
+
+The elements can be used by `get_element()` function from template files. Modify `path/to/themes/city/index.php`.
 
 ```php
 <?php get_header(); ?>
@@ -56,13 +58,15 @@ The elements can be used by `get_element()` function on template files. Modify `
 <?php get_footer(); ?>
 ```
 
-You can now see the rendered view replaced to `get_element('news')` from `path/to/themes/city/elements/views/news.php`.
+`get_element()` executes `exec()` method on the controller, and the controller renders the view. You can now see the element replaced from `get_element('news')` to `path/to/themes/city/elements/views/news.php`.
 
 ```html
 <div id="news">
 	<p>News</p>
 </div>
 ```
+
+### Controller
 
 Here is a simple description for the controller.
 
@@ -89,7 +93,13 @@ class NewsController extends MvctController {
 }
 ```
 
+### Model
+
 Fundamental models for WordPress objects such as `post` are defined in `path/to/plugins/wp-mvc-theme/core/models/`.
+
+### Test
+
+...
 
 ## Links
 
