@@ -12,31 +12,31 @@ An MVC framework for WordPress theme
 
 Go int the WP MVC Theme directory and make sure that `mvct` is executable.
 
-    $ cd path/to/plugins/wp-mvc-theme
-    $ chmod +x mvct
+	$ cd path/to/plugins/wp-mvc-theme
+	$ chmod +x mvct
 
 Generate the theme's initial code.
 
-    $ ./mvct generate theme city
+	$ ./mvct generate theme city
 
 This will generate files in `path/to/themes/city/` that create a WP MVC Theme-based theme. The theme can now be activated in WordPress.
 
 Generate an element's initial code.
 
-    $ ./mvct generate element news
+	$ ./mvct generate element news
 
 This will generate controller, model and view for news in `path/to/themes/city/elements/`, and test in `path/to/themes/city/tests/`. The element can now be used from the theme.
 
 You can also generate codes separately like following:
 
-    $ ./mvct generate controller feature
-    $ ./mvct generate model feature
-    $ ./mvct generate view feature
-    $ ./mvct generate test feature
+	$ ./mvct generate controller feature
+	$ ./mvct generate model feature
+	$ ./mvct generate view feature
+	$ ./mvct generate test feature
 
 See `help` for more detail.
 
-    $ ./mvct help
+	$ ./mvct help
 
 ## Usage
 
@@ -46,11 +46,11 @@ The elements can be used by `get_element()` function on template files. Modify `
 <?php get_header(); ?>
 
 <div id="container">
-    <div id="main">
-        <h2>City</h2>
-        <?php get_element('news'); // <- Modify here ?>
-    </div>
-    <?php get_sidebar(); ?>
+	<div id="main">
+		<h2>City</h2>
+		<?php get_element('news'); // <- Modify here ?>
+	</div>
+	<?php get_sidebar(); ?>
 </div>
 
 <?php get_footer(); ?>
@@ -60,16 +60,44 @@ You can now see the rendered view replaced to `get_element('news')` from `path/t
 
 ```html
 <div id="news">
-    <p>News</p>
+	<p>News</p>
 </div>
 ```
 
-The controller can pass variables to be used in the view.
+Here is a simple description for the controller.
 
-...
+* Models which are used in the controller are set by `$uses`.
+* `$this->set()` can pass variables to the view.
+* `$this->render_view()` renders given view.
+
+The example of `path/to/themes/city/elements/controllers/news_controller.php` is shown below.
+
+```php
+<?php
+
+class NewsController extends MvctController {
+
+	public $uses = array(
+		'MvctPost',
+	);
+
+	public function exec() {
+		$this->set('news', $this->MvctPost->find());
+		$this->render_view('news');
+	}
+
+}
+```
+
+Fundamental models for WordPress objects such as `post` are defined in `path/to/plugins/wp-mvc-theme/core/models/`.
+
+## Links
+
+* [WP-MVC][1] A lot of ideas come from this.
 
 ## License
 
-This is released under the [GPL v2][1].
+This is released under the [GPL v2][2].
 
 [1]: http://www.gnu.org/licenses/gpl-2.0.html
+[2]: http://www.gnu.org/licenses/gpl-2.0.html
