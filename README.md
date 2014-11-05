@@ -95,7 +95,7 @@ class NewsController extends MvctController {
 
 ### Model
 
-Fundamental models for WordPress objects such as `post` are defined in `path/to/plugins/wp-mvc-theme/core/models/`.
+Fundamental models for WordPress objects like `post` are defined in `path/to/plugins/wp-mvc-theme/core/models/`.
 
 ### Unit test
 
