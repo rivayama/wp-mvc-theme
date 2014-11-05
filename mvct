@@ -1,0 +1,3 @@
+#!/bin/bash
+mvct_core_path="$(dirname $0)/core"
+php -q "${mvct_core_path}/mvct.php" "$@"
