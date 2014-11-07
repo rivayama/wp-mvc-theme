@@ -19,12 +19,12 @@ Go into the WP MVC Theme directory and make sure that `mvct` is executable.
 
 Generate the theme's initial code.
 
-	$ ./mvct generate theme camel
+	$ ./mvct generate theme bear
 
-This will generate files in `path/to/themes/camel/` that create a WP MVC Theme-based theme. The theme can now be activated in WordPress. The directory structure is shown below.
+This will generate files in `path/to/themes/bear/` that create a WP MVC Theme-based theme. The theme can now be activated in WordPress. The directory structure is shown below.
 
 ```
-path/to/themes/camel
+path/to/themes/bear
 ├── elements
 │   ├── controllers
 │   ├── models
@@ -42,16 +42,16 @@ path/to/themes/camel
 
 Generate an element's initial code.
 
-	$ ./mvct generate element camel news
+	$ ./mvct generate element bear news
 
-This will generate controller, model and view for news in `path/to/themes/camel/elements/`, and test in `path/to/themes/camel/tests/`. The element can now be used from the theme.
+This will generate controller, model and view for news in `path/to/themes/bear/elements/`, and test in `path/to/themes/bear/tests/`. The element can now be used from the theme.
 
 You can also generate codes separately like following:
 
-	$ ./mvct generate controller camel news
-	$ ./mvct generate model camel news
-	$ ./mvct generate view camel news
-	$ ./mvct generate test camel news
+	$ ./mvct generate controller bear news
+	$ ./mvct generate model bear news
+	$ ./mvct generate view bear news
+	$ ./mvct generate test bear news
 
 See `help` for more detail.
 
@@ -59,14 +59,14 @@ See `help` for more detail.
 
 ### Template and view
 
-The elements can be used by `get_element()` function from template files. Modify `path/to/themes/camel/index.php`.
+The elements can be used by `get_element()` function from template files. Modify `path/to/themes/bear/index.php`.
 
 ```php
 <?php get_header(); ?>
 
 <div id="container">
 	<div id="main">
-		<h2>Camel</h2>
+		<h2>Bear</h2>
 		<?php get_element('news'); // <- Modify here ?>
 	</div>
 	<?php get_sidebar(); ?>
@@ -75,7 +75,7 @@ The elements can be used by `get_element()` function from template files. Modify
 <?php get_footer(); ?>
 ```
 
-`get_element()` executes `exec()` method on the controller, and the controller renders the view. You can now see the element replaced from `get_element('news')` to `path/to/themes/camel/elements/views/news.php`.
+`get_element()` executes `exec()` method on the controller, and the controller renders the view. You can now see the element replaced from `get_element('news')` to `path/to/themes/bear/elements/views/news.php`.
 
 ```html
 <div id="news">
@@ -91,7 +91,7 @@ Here is a simple description for the controller.
 * `$this->set()` can relay variables to the view.
 * `$this->render_view()` renders view of given name.
 
-An example of `path/to/themes/camel/elements/controllers/news_controller.php` is shown below.
+An example of `path/to/themes/bear/elements/controllers/news_controller.php` is shown below.
 
 ```php
 <?php
@@ -116,14 +116,14 @@ Fundamental models for WordPress objects like `post` are defined in `path/to/plu
 
 ### Unit test
 
-`mvct generate theme` generates phpunit.xml on the theme directory, and `mvct generate element` generates an unit test file for the element. You can now run unit test with `phpunit` on `path/to/themes/camel/`.
+`mvct generate theme` generates `phpunit.xml` on the theme directory, and `mvct generate element` generates an unit test file for the element. You can now run unit test with `phpunit` on `path/to/themes/bear/`.
 
 ```shell
-$ cd path/to/themes/camel
+$ cd path/to/themes/bear
 $ phpunit
 PHPUnit 4.2.2 by Sebastian Bergmann.
 
-Configuration read from /var/www/wp/wp-content/themes/camel/phpunit.xml
+Configuration read from /var/www/wp/wp-content/themes/bear/phpunit.xml
 
 .
 
