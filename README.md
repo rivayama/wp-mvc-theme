@@ -85,7 +85,7 @@ The elements can be used by `get_element()` function from template files. Modify
 
 ### Controller
 
-Here is a simple description for the controller.
+Features of the controller are following:
 
 * Models which are used in the controller are set by `$uses`.
 * `$this->set()` can relay variables to the view.
@@ -142,5 +142,5 @@ Some useful methods like `getElement()` are available on `wp-mvc-theme/core/test
 
 This is released under the [GPL v2][2].
 
-[1]: http://www.gnu.org/licenses/gpl-2.0.html
+[1]: https://github.com/tombenner/wp-mvc
 [2]: http://www.gnu.org/licenses/gpl-2.0.html
