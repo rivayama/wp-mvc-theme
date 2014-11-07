@@ -19,7 +19,7 @@ Generate the theme's initial code.
 
 	$ ./mvct generate theme camel
 
-This will generate files in `path/to/themes/camel/` that create a WP MVC Theme-based theme. The theme can now be activated in WordPress. The directory structure will be like below:
+This will generate files in `path/to/themes/camel/` that create a WP MVC Theme-based theme. The theme can now be activated in WordPress. The directory structure is shown below.
 
 ```
 path/to/themes/camel
