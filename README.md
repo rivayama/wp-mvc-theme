@@ -8,6 +8,8 @@ An MVC framework for WordPress theme
 2. Activate the plugin through the "Plugins" menu in WordPress
 3. Create a theme using the code generation utility `mvct`:
 
+## Usage
+
 ### Code generation
 
 Go into the WP MVC Theme directory and make sure that `mvct` is executable.
@@ -54,8 +56,6 @@ You can also generate codes separately like following:
 See `help` for more detail.
 
 	$ ./mvct help
-
-## Usage
 
 ### Template and view
 
