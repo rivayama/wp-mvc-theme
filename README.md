@@ -53,6 +53,11 @@ You can also generate codes separately like following:
 	$ ./mvct generate view bear news
 	$ ./mvct generate test bear news
 
+Generating template and fixture(yaml) are also available.
+
+	$ ./mvct generate template bear single # Generates single.php
+	$ ./mvct generate fixture bear news # Generates tests/fixtures/news.yml
+
 See `help` for more detail.
 
 	$ ./mvct help

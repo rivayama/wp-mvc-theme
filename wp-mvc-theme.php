@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: WP MVC Theme
-Plugin URI: PLUGIN SITE HERE
+Plugin URI: https://github.com/rivayama/wp-mvc-theme
 Description: Sets up an MVC framework for theme development.
 Author: rivayama
 Author URI: https://github.com/rivayama
