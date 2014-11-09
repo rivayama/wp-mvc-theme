@@ -55,8 +55,10 @@ You can also generate codes separately like following:
 
 Generating template and fixture(yaml) are also available.
 
-	$ ./mvct generate template bear single # Generates single.php
-	$ ./mvct generate fixture bear news # Generates tests/fixtures/news.yml
+```shell
+$ ./mvct generate template bear single # Generates single.php
+$ ./mvct generate fixture bear news # Generates tests/fixtures/news.yml
+```
 
 See `help` for more detail.
 
